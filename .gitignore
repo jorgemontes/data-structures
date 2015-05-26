@@ -1,0 +1,12 @@
+#######################
+## Ignoring Eclipse Files
+#######################
+*.lock
+*.log
+*.zip
+*.ini
+.metadata/
+*.classpath
+*.class
+.project
+.settings/
