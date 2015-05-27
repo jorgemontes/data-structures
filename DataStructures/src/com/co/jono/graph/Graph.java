@@ -102,7 +102,12 @@ public interface Graph<V, E> {
 	 */
 	public boolean removeEdge(E edge) throws IllegalArgumentException,
 			NullPointerException;
-	
+
+	/**
+	 * gets all the added vertices to the graph
+	 * 
+	 * @return <code>Collection<V></code> - all the vertices added
+	 */
 	public Collection<V> getVertices();
 
 }

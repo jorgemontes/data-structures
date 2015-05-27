@@ -1,6 +1,16 @@
 package com.co.jono.graph;
 
+/**
+ * Class that represents a pair of vertices that are adjacent in a graph
+ * 
+ * @author jorgemontes
+ * @version 1.0
+ */
 public class Edge {
+
+	/**
+	 * Properties that represents the vertex
+	 */
 	private Vertex initialVertex;
 	private Vertex finalVertex;
 

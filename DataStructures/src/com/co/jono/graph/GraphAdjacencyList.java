@@ -5,10 +5,23 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Implementation of the Adjacency List more info at:
+ * <a>http://en.wikipedia.org/wiki/Adjacency_list</a>
+ * 
+ * @author jorgemontes
+ * @version 1.0
+ */
 public class GraphAdjacencyList implements Graph<Vertex, Edge> {
 
+	/**
+	 * property that represents the adjacency list
+	 */
 	private Set<List<Vertex>> adjacencyList = null;
 
+	/**
+	 * Default contructor
+	 */
 	public GraphAdjacencyList() {
 		adjacencyList = new HashSet<List<Vertex>>();
 	}
@@ -42,6 +55,16 @@ public class GraphAdjacencyList implements Graph<Vertex, Edge> {
 		return vertex;
 	}
 
+	/**
+	 * Validation often repeated through the code
+	 * 
+	 * @param vertex
+	 *            - the vertex to validate
+	 * @throws IllegalArgumentException
+	 *             - if the vertex are not in the graph
+	 * @throws NullPointerException
+	 *             - if the vertex is null
+	 */
 	private void validateVertex(Vertex vertex) throws IllegalArgumentException,
 			NullPointerException {
 		if (vertex == null)
@@ -111,7 +134,14 @@ public class GraphAdjacencyList implements Graph<Vertex, Edge> {
 		return result;
 	}
 
-	public List<Vertex> getVertexList(Vertex vertex) {
+	/**
+	 * Gets the vertex adjacency list
+	 * 
+	 * @param vertex
+	 *            - the vertex to find
+	 * @return <code>List<Vertex></code> Represents the adjacency list
+	 */
+	private List<Vertex> getVertexList(Vertex vertex) {
 		for (List<Vertex> adjacencyRow : this.adjacencyList) {
 			if (adjacencyRow.get(0).equals(vertex)) {
 				return adjacencyRow;
