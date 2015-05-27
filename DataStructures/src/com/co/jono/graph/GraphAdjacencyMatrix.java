@@ -1,11 +1,12 @@
 package com.co.jono.graph;
 
+import java.util.Collection;
 import java.util.Set;
 
-public class GraphAdjacencyMatrix implements Graph{
+public class GraphAdjacencyMatrix implements Graph<Vertex, Edge>{
 
 	@Override
-	public Object addEdge(Object init, Object end)
+	public Edge addEdge(Vertex init, Vertex end)
 			throws IllegalArgumentException, ClassCastException,
 			NullPointerException {
 		// TODO Auto-generated method stub
@@ -13,37 +14,44 @@ public class GraphAdjacencyMatrix implements Graph{
 	}
 
 	@Override
-	public Object addVertex(Object vertex) throws NullPointerException {
+	public Vertex addVertex(Vertex vertex) throws NullPointerException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean adjacent(Object init, Object end)
+	public boolean adjacent(Vertex init, Vertex end)
 			throws IllegalArgumentException, NullPointerException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Set neighbors(Object vertex) throws IllegalArgumentException,
-			NullPointerException {
+	public Set<Vertex> neighbors(Vertex vertex)
+			throws IllegalArgumentException, NullPointerException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean removeVertex(Object vertex) throws IllegalArgumentException,
+	public boolean removeVertex(Vertex vertex) throws IllegalArgumentException,
 			NullPointerException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean removeEdge(Object edge) throws IllegalArgumentException,
+	public boolean removeEdge(Edge edge) throws IllegalArgumentException,
 			NullPointerException {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public Collection<Vertex> getVertices() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

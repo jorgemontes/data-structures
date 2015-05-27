@@ -1,5 +1,6 @@
 package com.co.jono.graph;
 
+import java.util.Collection;
 import java.util.Set;
 
 /**
@@ -101,5 +102,7 @@ public interface Graph<V, E> {
 	 */
 	public boolean removeEdge(E edge) throws IllegalArgumentException,
 			NullPointerException;
+	
+	public Collection<V> getVertices();
 
 }
