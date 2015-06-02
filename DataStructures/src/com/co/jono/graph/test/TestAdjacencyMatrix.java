@@ -12,6 +12,7 @@ import org.junit.Test;
 import com.co.jono.graph.Edge;
 import com.co.jono.graph.Graph;
 import com.co.jono.graph.GraphAdjacencyList;
+import com.co.jono.graph.GraphAdjacencyMatrix;
 import com.co.jono.graph.Vertex;
 
 /**
@@ -20,7 +21,7 @@ import com.co.jono.graph.Vertex;
  * @author jorgemontes
  * @version 1.0
  */
-public class TestAdjacencyList {
+public class TestAdjacencyMatrix {
 
 	/**
 	 * A->B
@@ -34,7 +35,7 @@ public class TestAdjacencyList {
 	 */
 	@Before
 	public void runBeforeEveryTest() {
-		graph = new GraphAdjacencyList();
+		graph = new GraphAdjacencyMatrix();
 		// Vertex creation
 		a = new Vertex("A", UUID.randomUUID());
 		b = new Vertex("B", UUID.randomUUID());
