@@ -146,6 +146,9 @@ public class TestAdjacencyMatrix {
 		if (vertices.size() == 0) {
 			fail("a and b vertices were expected!");
 		}
+		if (vertices.size() > 2) {
+			fail("a and b vertices were expected!");
+		}
 		if (!vertices.contains(a) || !vertices.contains(b)) {
 			fail("a and b vertices were expected!");
 		}
