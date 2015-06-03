@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.util.Set;
 import java.util.UUID;
 
 import org.junit.Before;
@@ -11,7 +12,6 @@ import org.junit.Test;
 
 import com.co.jono.graph.Edge;
 import com.co.jono.graph.Graph;
-import com.co.jono.graph.GraphAdjacencyList;
 import com.co.jono.graph.GraphAdjacencyMatrix;
 import com.co.jono.graph.Vertex;
 
@@ -130,10 +130,24 @@ public class TestAdjacencyMatrix {
 			fail("Not a IllegalArgumentException");
 		}
 	}
-	
+
 	@Test
-	public void testNotAdjacent(){
+	public void testNotAdjacent() {
 		boolean adja = graph.adjacent(b, a);
 		assertTrue("the nodes are adjacent", !adja);
+	}
+
+	@Test
+	public void testGetVertices() {
+		Set<Vertex> vertices = (Set<Vertex>) graph.getVertices();
+		if (vertices == null) {
+			fail("a and b vertices were expected!");
+		}
+		if (vertices.size() == 0) {
+			fail("a and b vertices were expected!");
+		}
+		if (!vertices.contains(a) || !vertices.contains(b)) {
+			fail("a and b vertices were expected!");
+		}
 	}
 }

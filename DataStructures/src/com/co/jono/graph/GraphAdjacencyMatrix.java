@@ -6,12 +6,22 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Implementation of the Adjacency Matrix more info at:
+ * <a>http://en.wikipedia.org/wiki/Adjacency_matrix</a>
+ * 
+ * @author jorgemontes
+ * @version 1.0
+ */
 public class GraphAdjacencyMatrix implements Graph<Vertex, Edge> {
 
+	/**
+	 * The matrix that represents a graph
+	 */
 	private AdjacencyMatrix matrix = null;
 
 	/**
-	 * 
+	 * default constructor
 	 */
 	public GraphAdjacencyMatrix() {
 		super();
@@ -57,10 +67,10 @@ public class GraphAdjacencyMatrix implements Graph<Vertex, Edge> {
 	@Override
 	public Set<Vertex> neighbors(Vertex vertex)
 			throws IllegalArgumentException, NullPointerException {
-		List<Vertex> vertices =  (List<Vertex>) this.getVertices();
+		List<Vertex> vertices = (List<Vertex>) this.getVertices();
 		Set<Vertex> result = new HashSet<Vertex>();
-		for(Vertex vertexInGraph: vertices){
-			if(adjacent(vertex, vertexInGraph)){
+		for (Vertex vertexInGraph : vertices) {
+			if (adjacent(vertex, vertexInGraph)) {
 				result.add(vertexInGraph);
 			}
 		}
